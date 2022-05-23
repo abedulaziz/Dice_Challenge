@@ -1,9 +1,9 @@
 const header = document.querySelector(".container > h1"),
-    dices = document.querySelectorAll(".container .dice img");
+    dicee = document.querySelectorAll(".container .dice img");
 
 var selections = []
 
-dices.forEach(dice => {
+dicee.forEach(dice => {
 
   var dice_random_num = Math.floor(Math.random() * 6) +1;
   selections.push(dice_random_num)
@@ -14,5 +14,5 @@ if (selections[0] === selections[1]) {
   header.innerText = "Draw!"
 }
 else {
-  header.innerText = `🚩Play ${selections.indexOf(Math.max(...selections)) +1} Wins!`
+  header.innerText = `🚩 Play ${selections.indexOf(Math.max(...selections)) +1} Wins!`
 }
